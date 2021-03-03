@@ -48,3 +48,14 @@ Greatest Increase in Profits: {month_with_greatest_increase} (${greatest_increas
 Greatest Decrease in Profits: {month_with_greatest_decrease} (${greatest_decrease_in_profits})
 """
 print(final_analysis)
+
+#Write to the text path
+f = open("final_analysis.txt", "a")
+f.writelines(["Financial Analysis ----------------------------Total Months: 86 Total: $38382578 Average Change: $-2315.12 Greatest Increase in Profits: Feb-2012 ($1926159) Greatest Decrease in Profits: Sep-2013 ($-2196167)"]
+)
+
+f.close()
+
+#open and read the file after the appending:
+f = open("final_analysis.txt", "r")
+print(f.read())
